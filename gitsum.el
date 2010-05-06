@@ -145,7 +145,7 @@ A numeric argument serves as a repeat count."
   (interactive)
   (with-current-buffer log-edit-parent-buffer
     (shell-command-on-region (point-min) (point-max)
-                             "git apply --cached"))
+                             "git apply --cached --ignore-whitespace"))
   (shell-command-on-region (point-min) (point-max)
                            "git commit -F- --cleanup=strip")
   (with-current-buffer log-edit-parent-buffer
